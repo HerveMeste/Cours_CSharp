@@ -1,0 +1,50 @@
+﻿@model List<Photo>
+
+@{
+    ViewData["Title"] = "Profil utilsateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Recherche de photos</h1>
+
+<form class="my-5 text-center" method="get" src="https://localhost:44399/Comment/PostId">
+    <div class="col-4 mb-3 text-center mx-auto">
+        <label for="inputPlanets" class="form-label">Saisir le numéro de l'utilsateur</label>
+        <input type="number" id="inputPlanets" class="form-control" name="userId" required min="1" max="10" />
+        <div id="numberHelp" class="form-text">(un numéro entre 1 et 10)</div>
+    </div>
+    <button type="submit" class="btn btn-primary">ENVOYER</button>
+</form>
+
+@{
+    if (Model != null)
+    {
+        <h4> Il y a @Model.Count Photos</h4>
+        <table class="table table-bordered text-center table-responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>AlbumID</th>
+                    <th>Title</th>
+                    <th>Petite Image</th>
+                    <th>Grandes Images</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Photo photo in Model)
+                {
+                    <tr>
+                        <td class="align-middle">@photo.id</td>
+                        <td class="align-middle">@photo.albumId</td>
+                        <td class="align-middle">@photo.title</td>
+                        <td class="align-middle"><img src="@photo.thumbnailUrl" /></td>
+                        <td class="align-middle"><img src="@photo.url" /></td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    }
+}

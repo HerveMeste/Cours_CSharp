@@ -1,0 +1,47 @@
+﻿@model List<Post>
+
+@{
+    ViewData["Title"] = "Profil utilsateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Recherche de posts</h1>
+
+<form class="my-5 text-center" method="get" src="https://localhost:44399/Post/GetPostByID">
+    <div class="col-4 mb-3 text-center mx-auto">
+        <label for="inputPlanets" class="form-label">Saisir le numéro de l'utilsateur</label>
+        <input type="number" id="inputPlanets" class="form-control" name="userId" required min="1" max="10" />
+        <div id="numberHelp" class="form-text">(un numéro entre 1 et 10)</div>
+    </div>
+    <button type="submit" class="btn btn-primary">ENVOYER</button>
+</form>
+
+@{
+    if (Model != null)
+    {
+        <h4> Il y a @Model.Count posts</h4>
+        <table class="table table-bordered text-center table-responsive">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>UserID</th>
+                    <th>Title</th>
+                    <th>Article</th>
+                </tr>
+            </thead>
+            <tbody>
+           @foreach(Post post in Model)
+            { 
+                <tr>
+                    <td class="align-middle">@post.id</td>
+                    <td class="align-middle">@post.userId</td>
+                    <td class="align-middle">@post.title</td>
+                    <td class="align-middle">@post.body</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        
+
+    }
+}

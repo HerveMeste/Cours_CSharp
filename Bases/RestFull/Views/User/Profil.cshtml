@@ -1,0 +1,80 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Profil utilsateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Recherche d'utilisateurs</h1>
+
+<form class="my-5 text-center" method="get" src="https://localhost:44399/User/Profil">
+    <div class="col-4 mb-3 text-center mx-auto">
+        <label for="inputPlanets" class="form-label">Saisir le numéro de l'utilsateur</label>
+        <input type="number" id="inputPlanets" class="form-control" name="id" required min="1" max="10" />
+        <div id="numberHelp" class="form-text">(un numéro entre 1 et 10)</div>
+    </div>
+    <button type="submit" class="btn btn-primary">ENVOYER</button>
+</form>
+
+@{
+    if (Model != null)
+    {
+        <table class="table table-bordered text-center table-responsive">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Nom utilisateur</th>
+                    <th>Email</th>
+                    <th>Adresse</th>
+                    <th>Téléphone</th>
+                    <th>Site Web</th>
+                    <th>Entreprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle">@Model.name</td>
+                    <td class="align-middle">@Model.username</td>
+                    <td class="align-middle">@Model.email</td>
+                    <td class="align-middle">@Model.address.street @Model.address.suite @Model.address.zipcode @Model.address.city</td>
+                    <td class="align-middle">@Model.phone</td>
+                    <td class="align-middle">@Model.website</td>
+                    <td class="align-middle">@Model.company.name @Model.company.catchPhrase @Model.company.bs</td>
+                </tr>
+            </tbody>
+        </table>
+        @*<table class="table table-bordered text-center table-responsive">
+                <thead>
+                    <tr>
+                        <th>Orbital Period</th>
+                        <th>Population</th>
+                        <th>Residents</th>
+                        <th>Rotation Period</th>
+                        <th>Surface Water</th>
+                        <th>Terrain</th>
+                        <th>Url</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="align-middle">@Model.Orbital_period</td>
+                        <td class="align-middle">@Model.Population</td>
+                        <td>
+                            <ul class="list-group list-group-flush">
+                                @{
+                                    foreach (string url in Model.Residents)
+                                    {
+                                        <li class="list-group-item"><a href=@url>@url</a></li>
+                                    }
+                                }
+                            </ul>
+                        </td>
+                        <td class="align-middle">@Model.Rotation_period</td>
+                        <td class="align-middle">@Model.Surface_water</td>
+                        <td class="align-middle">@Model.Terrain</td>
+                        <td class="align-middle"><a href=@Model.Url>@Model.Url</a></td>
+                    </tr>
+                </tbody>
+            </table>*@
+    }
+}
