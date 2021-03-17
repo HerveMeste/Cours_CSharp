@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Spent>
+<HTML>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Products</th>
+            </tr>
+        </thead>
+        @foreach (var spents in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>
+                        @spents.spentName
+                        
+                    </td>
+                    <td>
+                        @spents.amount 
+                    </td>
+                    <td>
+                        @spents.date 
+                    </td>
+                </tr>
+            </tbody> 
+         }
+    </table>
+    <p><strong>Total price : @Model.Sum(e => e.amount) </strong> </p>
+</body>
+</HTML>
