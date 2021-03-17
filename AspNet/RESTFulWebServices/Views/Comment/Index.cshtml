@@ -1,0 +1,43 @@
+﻿@model List<Comment>
+
+@{
+    ViewBag.Title = "Comments of User's Posts";
+    Layout = "_Layout";
+}
+
+<h1>Comment Searching</h1>
+
+<form class="my-5 text-center" method="get" src="https://localhost:44391/Comment/Index">
+    <div class="col-4 mb-3 text-center mx-auto">
+        <label for="inputUsers" class="form-label">Choose your id's user</label>
+        <input type="number" id="inputUsers" class="form-control" name="userId" required min="1" max="10" />
+        <div id="numberHelp" class="form-text">(a number between 1 and 10)</div>
+    </div>
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+</form>
+
+@{
+    if (Model.Count > 0)
+    {
+        <h4>There are @Model.Count comments from your User choice.</h4>
+        <table class="table table-bordered text-center table-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Comment comment in Model)
+                {
+                    <tr>
+                        <td class="align-middle">@comment.name</td>
+                        <td class="align-middle">@comment.email</td>
+                        <td class="align-middle">@comment.body</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}

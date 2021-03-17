@@ -1,0 +1,47 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "User Profil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>User searching</h1>
+
+<form class="my-5 text-center" method="get" src="https://localhost:44391/User/Index">
+    <div class="col-4 mb-3 text-center mx-auto">
+        <label for="inputUsers" class="form-label">Choose your id's user</label>
+        <input type="number" id="inputUsers" class="form-control" name="id" required min="1" max="10" />
+        <div id="numberHelp" class="form-text">(a number between 1 and 10)</div>
+    </div>
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+</form>
+
+@{
+    if (Model != null)
+    {
+        <table class="table table-bordered text-center table-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Name of User</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle">@Model.name</td>
+                    <td class="align-middle">@Model.username</td>
+                    <td class="align-middle">@Model.email</td>
+                    <td class="align-middle">@Model.address.street @Model.address.suite @Model.address.zipcode @Model.address.city</td>
+                    <td class="align-middle">@Model.phone</td>
+                    <td class="align-middle">@Model.website</td>
+                    <td class="align-middle">@Model.company.name @Model.company.catchPhrase @Model.company.bs</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}
