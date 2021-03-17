@@ -1,0 +1,13 @@
+C:\Users\Hervé\source\repos\Heritage\bin\Debug\netcoreapp3.1\Heritage.exe
+C:\Users\Hervé\source\repos\Heritage\bin\Debug\netcoreapp3.1\Heritage.deps.json
+C:\Users\Hervé\source\repos\Heritage\bin\Debug\netcoreapp3.1\Heritage.runtimeconfig.json
+C:\Users\Hervé\source\repos\Heritage\bin\Debug\netcoreapp3.1\Heritage.runtimeconfig.dev.json
+C:\Users\Hervé\source\repos\Heritage\bin\Debug\netcoreapp3.1\Heritage.dll
+C:\Users\Hervé\source\repos\Heritage\bin\Debug\netcoreapp3.1\Heritage.pdb
+C:\Users\Hervé\source\repos\Heritage\obj\Debug\netcoreapp3.1\Heritage.csprojAssemblyReference.cache
+C:\Users\Hervé\source\repos\Heritage\obj\Debug\netcoreapp3.1\Heritage.AssemblyInfoInputs.cache
+C:\Users\Hervé\source\repos\Heritage\obj\Debug\netcoreapp3.1\Heritage.AssemblyInfo.cs
+C:\Users\Hervé\source\repos\Heritage\obj\Debug\netcoreapp3.1\Heritage.csproj.CoreCompileInputs.cache
+C:\Users\Hervé\source\repos\Heritage\obj\Debug\netcoreapp3.1\Heritage.dll
+C:\Users\Hervé\source\repos\Heritage\obj\Debug\netcoreapp3.1\Heritage.pdb
+C:\Users\Hervé\source\repos\Heritage\obj\Debug\netcoreapp3.1\Heritage.genruntimeconfig.cache
