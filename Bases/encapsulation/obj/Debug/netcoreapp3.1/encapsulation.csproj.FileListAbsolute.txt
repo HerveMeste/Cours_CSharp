@@ -1,0 +1,13 @@
+C:\Users\Hervé\source\repos\encapsulation\obj\Debug\netcoreapp3.1\encapsulation.csprojAssemblyReference.cache
+C:\Users\Hervé\source\repos\encapsulation\obj\Debug\netcoreapp3.1\encapsulation.AssemblyInfoInputs.cache
+C:\Users\Hervé\source\repos\encapsulation\obj\Debug\netcoreapp3.1\encapsulation.AssemblyInfo.cs
+C:\Users\Hervé\source\repos\encapsulation\obj\Debug\netcoreapp3.1\encapsulation.csproj.CoreCompileInputs.cache
+C:\Users\Hervé\source\repos\encapsulation\bin\Debug\netcoreapp3.1\encapsulation.exe
+C:\Users\Hervé\source\repos\encapsulation\bin\Debug\netcoreapp3.1\encapsulation.deps.json
+C:\Users\Hervé\source\repos\encapsulation\bin\Debug\netcoreapp3.1\encapsulation.runtimeconfig.json
+C:\Users\Hervé\source\repos\encapsulation\bin\Debug\netcoreapp3.1\encapsulation.runtimeconfig.dev.json
+C:\Users\Hervé\source\repos\encapsulation\bin\Debug\netcoreapp3.1\encapsulation.dll
+C:\Users\Hervé\source\repos\encapsulation\bin\Debug\netcoreapp3.1\encapsulation.pdb
+C:\Users\Hervé\source\repos\encapsulation\obj\Debug\netcoreapp3.1\encapsulation.dll
+C:\Users\Hervé\source\repos\encapsulation\obj\Debug\netcoreapp3.1\encapsulation.pdb
+C:\Users\Hervé\source\repos\encapsulation\obj\Debug\netcoreapp3.1\encapsulation.genruntimeconfig.cache
