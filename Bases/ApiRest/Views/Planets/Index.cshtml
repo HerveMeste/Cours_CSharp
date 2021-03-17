@@ -1,0 +1,67 @@
+﻿@model Planets
+
+<body>
+    <h2> Résultat </h2>
+    <div class="text-center">
+        <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Diameter</th>
+                <th>Orbital period</th>
+                <th>Climate</th>
+                <th>Creation</th>
+                <th>Edition</th>
+                <th>Films</th>
+                <th>Gravity</th>
+                <th>Population</th>
+                <th>Residents</th>
+                <th>Rotation period</th>
+                <th>surface water</th>
+                <th>Terrain</th>
+                <th>Url</th>
+            </tr>   
+            <tr>
+                <td>@Model.name</td>
+                <td>@Model.diameter</td>
+                <td>@Model.orbital_period</td>
+                <td>@Model.climate</td>
+                <td>@Model.created</td>
+                <td>@Model.edited</td>
+                <td>
+                    <ul class="list-group list-group-flush">
+                        @{
+                            foreach (string urls in Model.films)
+                            {
+                                <li class="list-group-item"><a href=@urls>@urls</a></li>
+                            }
+                        }
+                    </ul>
+                </td>
+
+                <td>@Model.gravity</td>
+                <td>@Model.population</td>
+                <td>
+                    <ul class="list-group list-group-flush">
+                        @{
+                            foreach (string url in Model.residents)
+                            {
+                                <li class="list-group-item"><a href=@url>@url</a></li>
+                            }
+                        }
+                    </ul>
+                </td>
+
+
+                <td>@Model.rotation_period</td>
+                <td>@Model.surface_water</td>
+                <td>@Model.terrain</td>
+                <td>@Model.url</td>
+                <td class="table-active"></td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+
